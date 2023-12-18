@@ -10,7 +10,6 @@ const timerDisplay = function () {
 
 	const tick = function () {
 		valueSec++;
-
 		if (valueSec !== 60)
 			sec.textContent = String(valueSec % 60).padStart(2, "0");
 
@@ -21,8 +20,7 @@ const timerDisplay = function () {
 		}
 
 		if (valueMin % 60 === 0) {
-			min.textContent = String(0).padStart(2, "0");
-			sec.textContent = String(0).padStart(2, "0");
+			min.textContent = String(valueMin % 60).padStart(2, "0");
 		}
 	};
 	tick();
@@ -32,20 +30,19 @@ const timerDisplay = function () {
 const startQuiz = async function () {
 	let url;
 	if (opt === 1) {
-		url = "../../currentaffairs.json";
+		url = "../currentaffairs.json";
 		type = "Current Affairs";
 	}
 	if (opt === 2) {
-		url = "../../nature.json";
+		url = "../nature.json";
 		type = "Nature";
 	}
 
 	const questions = await fetch(url);
-
 	const output = await questions.json();
+	timerDisplay();
 	let n = 1,
-		score = 0,
-		realAns;
+		score = 0;
 
 	card.innerHTML = `
 		<div class="card-header question-val fs-5">Question ${n} of 20</div>
@@ -73,11 +70,10 @@ const startQuiz = async function () {
 	let next = document.querySelector(".next");
 	let stop = document.querySelector(".stop");
 
-	timerDisplay();
 	if (String(ans.value).toLowerCase() === String(output[n][1]).toLowerCase())
 		score++;
 
-	const nextQuestion = async function () {
+	const nextQuestion = function () {
 		try {
 			if (
 				String(ans.value).toLowerCase() === String(output[n][1]).toLowerCase()
