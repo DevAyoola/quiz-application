@@ -1,0 +1,27 @@
+.fs-18 {
+	font-size: 18px;
+}
+
+@media screen and (max-width: 576px) {
+	.card {
+		width: 95%;
+	}
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+	.card {
+		width: 84%;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+	.card {
+		width: 54%;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.card {
+		width: 50%;
+	}
+}

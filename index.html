@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Quiz Application</title>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="assets/bootstrap-5.2.3/css/bootstrap.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+		/>
+		<link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+	</head>
+	<body>
+		<nav class="navbar navbar1 navbar-expand-lg bg-light">
+			<div class="container-fluid">
+				<a class="navbar-brand fw-semibold" href="#">
+					<i class="fa fa-question-circle fs-4"></i>
+					Quiz App</a
+				>
+
+				<div class="timer me-2 fs-18">
+					<span class="min">00</span>
+					:
+					<span class="sec">00</span>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container-fluid m-auto question-cont">
+			<div class="card mx-auto mt-5">
+				<div class="card-header question-val fs-5">Welcome!</div>
+				<div class="card-body">
+					<div class="d-flex pt-3 px-1 type-1">
+						<div class="me-auto fs-18">Current Affairs</div>
+						<div class="ms-auto">
+							<button class="btn btn-success start">Start</button>
+						</div>
+					</div>
+					<div class="d-flex pt-3 px-1 type-2">
+						<div class="me-auto fs-18">Nature</div>
+						<div class="ms-auto">
+							<button class="btn btn-success start">Start</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer class="fixed-bottom bg-light py-2">
+			<div class="container-fluid">
+				<div class="ms-auto">© 2023</div>
+			</div>
+		</footer>
+		<script src="assets/bootstrap-5.2.3/js/bootstrap.bundle.js"></script>
+		<script src="assets/js/script.js"></script>
+	</body>
+</html>
