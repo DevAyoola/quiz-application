@@ -30,11 +30,11 @@ const timerDisplay = function () {
 const startQuiz = async function () {
 	let url;
 	if (opt === 1) {
-		url = "../currentaffairs.json";
+		url = "/quiz-application/currentaffairs.json";
 		type = "Current Affairs";
 	}
 	if (opt === 2) {
-		url = "../nature.json";
+		url = "/quiz-application/nature.json";
 		type = "Nature";
 	}
 
